@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: liscenselifecycletracker
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/lltexampledb?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate: 
+        ddl-auto: update
+    show-sql: true
+
+toyandbooklibapp:
+  jwtSecret: BLUEYONDERBELLANDURBENGALURUBLUEYONDERBELLANDURBENGALURUBLUEYONDERBELLANDURBENGALURUBENGALURUBLUEYONDERBELLANDURBENGALURUBENGALURUBLUEYONDERBELLANDURBENGALURU
+  jwtExpirationMs: 86400000
+    
+##Logger configuration
+#logging:
+#  file:
+#    name: logs/app.log
+##The filename pattern used to create log archives.
+#  logback:
+#    rollingpolicy:
+#      file-name-pattern: logs/%d{yyyy-MM, aux}/app.%d{yyyy-MM-dd}.%i.log
+##The maximum size of log file before it is archived.
+#      max-file-size: 100MB
+##The maximum amount of size log archives can take before being deleted.
+#      total-size-cap: 10GB
+##The maximum number of archive log files to keep (defaults to 7).
+#      max-history: 10
+    
